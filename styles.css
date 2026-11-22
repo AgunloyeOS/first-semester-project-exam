@@ -1,0 +1,646 @@
+
+/* =====================================
+   1. GENERAL STYLING
+===================================== */
+
+/* Import DM Sans font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+
+/* Reset browser default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #141414;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* =====================================
+   2. REUSABLE STYLES
+===================================== */
+
+.primary-button {
+    display: inline-block;
+    background-color: #5435e8;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.primary-button:hover {
+    background-color: #3920b8;
+}
+
+
+.logo {
+    color: #5435e8;
+    font-weight: 800;
+    font-size: 23px;
+    letter-spacing: -0.8px;
+}
+
+
+/* =====================================
+   3. NAVIGATION BAR
+===================================== */
+
+header {
+    background-color: #ffffff;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 7%;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.nav-links a {
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #5435e8;
+}
+
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px;
+}
+
+
+.login {
+    padding: 7px 20px;
+    border: 1px solid #5435e8;
+    border-radius: 4px;
+    color: #5435e8;
+    font-weight: 600;
+}
+
+
+/* =====================================
+   4. HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 55px 12%;
+    color: #ffffff;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("assets/images/hero-background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+
+.hero h1 {
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.7px;
+    margin-bottom: 15px;
+}
+
+
+.hero p {
+    max-width: 500px;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #eeeeee;
+}
+
+
+/* =====================================
+   5. ABOUT SECTION
+===================================== */
+
+.about {
+    padding: 55px 12% 45px;
+}
+
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+    gap: 45px;
+    margin-bottom: 55px;
+}
+
+
+.about-text h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.about-text p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #444444;
+}
+
+
+.about-image img {
+    height: 250px;
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =====================================
+   6. WHY JOIN CHATTER
+===================================== */
+
+.why-chatter {
+    padding: 0 2% 10px;
+}
+
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.section-heading h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+
+.section-heading p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #444444;
+}
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+.feature {
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+
+.feature:hover {
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.feature-icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f0ff;
+    color: #5435e8;
+    border-radius: 50%;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+
+.feature h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+
+.feature p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #666666;
+}
+
+
+/* =====================================
+   7. TESTIMONIAL SECTION
+===================================== */
+
+.testimonial {
+    background-color: #fff4e4;
+    padding: 45px 12%;
+}
+
+
+.testimonial-content {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+
+.testimonial-image img {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+}
+
+
+.testimonial-text p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+.testimonial-text h3 {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+.testimonial-text h3 span {
+    font-weight: 400;
+}
+
+
+/* =====================================
+   8. COMMUNITY SECTION
+===================================== */
+
+.community {
+    display: grid;
+    grid-template-columns: 0.9fr 1.3fr;
+    align-items: center;
+    gap: 50px;
+    padding: 55px 12%;
+}
+
+
+.community-images {
+    display: grid;
+    grid-template-columns: 85px 85px;
+    grid-template-rows: 85px 85px;
+    column-gap: 25px;
+    row-gap: 40px;
+    align-items: center;
+    width: fit-content;
+}
+
+
+.community-images img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+
+
+/* First picture - Top Left */
+.community-images img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+/* Second picture - Bottom Left */
+.community-images img:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+
+/* Third picture - Right Centre */
+.community-images img:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+}
+
+
+.community-content h2 {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+
+.community-content p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================
+   9. FOOTER
+===================================== */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    padding: 40px 7%;
+    background-color: #fff4e4;
+}
+
+
+.footer-logo .logo {
+    display: inline-block;
+}
+
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+.footer-links h3 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+.footer-links a {
+    display: block;
+    font-size: 11px;
+    color: #444444;
+    margin-bottom: 9px;
+    transition: color 0.3s ease;
+}
+
+
+.footer-links a:hover {
+    color: #5435e8;
+}
+
+
+/* =====================================
+   10. RESPONSIVE DESIGN - TABLETS
+===================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+
+    .features-grid {
+        gap: 15px;
+    }
+
+
+    .feature {
+        padding: 15px;
+    }
+
+
+    .testimonial-content {
+        grid-template-columns: 130px 1fr;
+        gap: 25px;
+    }
+
+
+    .testimonial-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .community {
+        gap: 25px;
+        padding: 50px 8%;
+    }
+
+
+    .community-content h2 {
+        font-size: 23px;
+    }
+
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
+
+/* =====================================
+   11. RESPONSIVE DESIGN - MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .nav-buttons {
+        gap: 10px;
+    }
+
+
+    .nav-links {
+        font-size: 11px;
+    }
+
+
+    .hero {
+        min-height: 300px;
+        padding: 45px 7%;
+        background-position: center;
+    }
+
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+
+    .hero p {
+        font-size: 12px;
+    }
+
+
+    .about {
+        padding: 40px 7%;
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    .about-image img {
+        height: 200px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+
+    .feature {
+        padding: 20px;
+    }
+
+
+    .testimonial {
+        padding: 40px 7%;
+    }
+
+
+    .testimonial-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+
+
+    .testimonial-image img {
+        margin: 0 auto;
+    }
+
+
+    .community {
+        grid-template-columns: 1fr;
+        padding: 45px 8%;
+        gap: 35px;
+    }
+
+
+    .community-images {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+
+    .community-content {
+        text-align: center;
+    }
+
+
+    .community-content h2 {
+        font-size: 25px;
+    }
+
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+
+    footer {
+        padding: 35px 7%;
+    }
+
+}
